@@ -11,7 +11,7 @@ module.exports = {
     } catch (error) {
       if (!error.path) {
         //informa o caminho do erro se não tiver
-        error.path = "src/controllers/client/findByIdClientesController.js";
+        error.path = "src/controllers/client/findManyClientesController.js";
       }
       throw error;
     }
