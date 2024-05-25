@@ -4,7 +4,8 @@ const findManyClientes = require("../../models/findManyClientes");
 module.exports = {
   async handle(req, res) {
     try {
-      const clients = await findManyClientes.execute();
+      const { pageIndex } = req.query
+      const clients = await findManyClientes.execute(pageIndex);
 
       logger.info("successfully found clients");
       res.status(200).json(clients);
