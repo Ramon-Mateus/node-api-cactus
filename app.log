@@ -4345,3 +4345,13 @@ C:\Users\ramon\projetos\node-api-cactus\src\models\findManyClientes.js:30:25
 
 Argument `AND`: Invalid value provided. Expected ClientesWhereInput or ClientesWhereInput[], provided Int.
 27/05/2024 19:20:40.916 [[32minfo[39m]: successfully found clients
+27/05/2024 19:21:25.003 [[32minfo[39m]: successfully found clients
+27/05/2024 19:22:55.638 [[32minfo[39m]: successfully found clients
+27/05/2024 19:27:54.569 [[32minfo[39m]: successfully found client
+27/05/2024 19:27:54.570 [[32minfo[39m]: successfully found client
+27/05/2024 19:27:57.224 [[32minfo[39m]: successfully found client
+27/05/2024 19:27:57.226 [[32minfo[39m]: successfully found client
+27/05/2024 19:28:07.724 [[32minfo[39m]: successfully found client
+27/05/2024 19:28:07.725 [[32minfo[39m]: successfully found client
+27/05/2024 19:28:09.298 [[32minfo[39m]: successfully found clients
+27/05/2024 19:28:09.303 [[32minfo[39m]: successfully found clients
