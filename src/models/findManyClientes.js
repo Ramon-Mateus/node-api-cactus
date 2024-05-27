@@ -4,33 +4,59 @@ const { query } = require("express");
 const prisma = new PrismaClient();
 
 module.exports = {
-  async execute(page, search) {
+  async execute(page, search, city) {
     const pageIndex = parseInt(page) || 0;
 
     try {
-      let [clientes, total] = await Promise.all([
+      let [clientes, total, clientesOnline, clientesOffline, cidades ] = await Promise.all([
         prisma.clientes.findMany({
-          where: search ? {
-            nomeCliente: {
-              contains: search
-            }
-          } : {},
+          where: {
+            AND: [
+              search ? { nomeCliente: { contains: search } } : {},
+              city ? { cidadeCliente: city } : {}
+            ]
+          },
         take: 10,
         skip: pageIndex * 10
         }),
         prisma.clientes.count({
-          where: search ? {
-            nomeCliente: {
-              contains: search
-            }
-          } : {}
+          where: {
+            AND: [
+              search ? { nomeCliente: { contains: search } } : {},
+              city ? { cidadeCliente: city } : {}
+            ]
+          },
+        }),
+        prisma.clientes.count({
+          where: {
+            AND: [
+              { statusCliente: true },
+              search ? { nomeCliente: { contains: search } } : {},
+              city ? { cidadeCliente: city } : {},
+            ]
+          }
+        }),
+        prisma.clientes.count({
+          where: {
+            AND: [
+              { statusCliente: false },
+              search ? { nomeCliente: { contains: search } } : {},
+              city ? { cidadeCliente: city } : {},
+            ]
+          }
+        }),
+        prisma.clientes.findMany({
+          select: {
+            cidadeCliente: true
+          },
+          distinct: ['cidadeCliente']
         })
       ]);
-
+      console.log(cidades)
       clientes = JSON.stringify(clientes, (key, value) =>
         typeof value === "bigint" ? value.toString() : value
       );
-      return { clientes, total };
+      return { clientes, total, clientesOnline, clientesOffline, cidades };
     } catch (error) {
       error.path = "src/models/findManyClientes.js";
       throw error;
