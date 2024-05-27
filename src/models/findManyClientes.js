@@ -7,46 +7,37 @@ module.exports = {
   async execute(page, search, city, idReq) {
     const pageIndex = parseInt(page) || 0;
 
+    const andSQL = [
+      search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
+      city ? { cidadeCliente: city } : {},
+      idReq ? { id: idReq } : {}
+    ]
+
+    const andSQLWithStatusTrue = [...andSQL, { statusCliente: true }];
+    const andSQLWithStatusFalse = [...andSQL, { statusCliente: false }];
+
     try {
       let [clientes, total, clientesOnline, clientesOffline, cidades, avgs ] = await Promise.all([
         prisma.clientes.findMany({
           where: {
-            AND: [
-              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {},
-              idReq ? { id: idReq } : {}
-            ]
+            AND: andSQL
           },
         take: 10,
         skip: pageIndex * 10
         }),
         prisma.clientes.count({
           where: {
-            AND: [
-              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {},
-              idReq ? { id: idReq } : {}
-            ]
+            AND: andSQL
           },
         }),
         prisma.clientes.count({
           where: {
-            AND: [
-              { statusCliente: true },
-              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {},
-              idReq ? { id: idReq } : {}
-            ]
+            AND: andSQLWithStatusTrue
           }
         }),
         prisma.clientes.count({
           where: {
-            AND: [
-              { statusCliente: false },
-              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {},
-              idReq ? { id: idReq } : {}
-            ]
+            AND: andSQLWithStatusFalse
           }
         }),
         prisma.clientes.findMany({
@@ -62,11 +53,7 @@ module.exports = {
             consumoUpload: true
           },
           where : {
-            AND: [
-              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {},
-              idReq ? { id: idReq } : {}
-            ]
+            AND: andSQL
           }
         })
       ]);
