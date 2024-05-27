@@ -8,7 +8,7 @@ module.exports = {
     const pageIndex = parseInt(page) || 0;
 
     try {
-      let [clientes, total, clientesOnline, clientesOffline, cidades ] = await Promise.all([
+      let [clientes, total, clientesOnline, clientesOffline, cidades, avgPlanos ] = await Promise.all([
         prisma.clientes.findMany({
           where: {
             AND: [
@@ -54,12 +54,24 @@ module.exports = {
             cidadeCliente: true
           },
           distinct: ['cidadeCliente']
+        }),
+        prisma.clientes.aggregate({
+          _avg: {
+            valorPlano: true
+          },
+          where : {
+            AND: [
+              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
+              city ? { cidadeCliente: city } : {},
+              idReq ? { id: idReq } : {}
+            ]
+          }
         })
       ]);
       clientes = JSON.stringify(clientes, (key, value) =>
         typeof value === "bigint" ? value.toString() : value
       );
-      return { clientes, total, clientesOnline, clientesOffline, cidades };
+      return { clientes, total, clientesOnline, clientesOffline, cidades, avgPlanos };
     } catch (error) {
       error.path = "src/models/findManyClientes.js";
       throw error;
