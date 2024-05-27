@@ -12,7 +12,7 @@ module.exports = {
         prisma.clientes.findMany({
           where: {
             AND: [
-              search ? { nomeCliente: { contains: search } } : {},
+              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
               city ? { cidadeCliente: city } : {}
             ]
           },
@@ -22,7 +22,7 @@ module.exports = {
         prisma.clientes.count({
           where: {
             AND: [
-              search ? { nomeCliente: { contains: search } } : {},
+              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
               city ? { cidadeCliente: city } : {}
             ]
           },
@@ -31,7 +31,7 @@ module.exports = {
           where: {
             AND: [
               { statusCliente: true },
-              search ? { nomeCliente: { contains: search } } : {},
+              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
               city ? { cidadeCliente: city } : {},
             ]
           }
@@ -40,7 +40,7 @@ module.exports = {
           where: {
             AND: [
               { statusCliente: false },
-              search ? { nomeCliente: { contains: search } } : {},
+              search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
               city ? { cidadeCliente: city } : {},
             ]
           }

@@ -3327,3 +3327,89 @@ Unknown argument `and`. Did you mean `id`? Available options are marked with ?.
 26/05/2024 23:08:52.414 [[32minfo[39m]: successfully found clients
 26/05/2024 23:08:52.415 [[32minfo[39m]: successfully found clients
 26/05/2024 23:08:57.549 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:11.232 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:11.437 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:12.458 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:12.461 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:14.206 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:16.648 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:17.470 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:21.832 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:23.128 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:23.130 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:23.725 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:23.727 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.237 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.238 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.372 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.374 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.811 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.812 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.993 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:24.996 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:25.892 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:25.895 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:27.304 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:27.306 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:27.908 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:27.910 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:28.851 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:28.854 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:30.150 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:30.151 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:32.001 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:33.132 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:35.336 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:37.240 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:37.241 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:37.371 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:37.374 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:38.397 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:38.493 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:38.635 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:38.762 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:39.355 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:39.466 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:39.669 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:39.672 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:39.840 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:39.843 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:41.709 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:41.711 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:42.784 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:42.787 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:43.490 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:43.492 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:43.691 [[32minfo[39m]: successfully found clients
+26/05/2024 23:17:43.692 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:09.878 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:09.880 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:10.065 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:10.067 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:10.341 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:10.341 [[32minfo[39m]: successfully found clients
+26/05/2024 23:18:13.464 [[32minfo[39m]: successfully found clients
+26/05/2024 23:22:01.659 [[32minfo[39m]: successfully found clients
+26/05/2024 23:22:30.420 [[32minfo[39m]: successfully found clients
+26/05/2024 23:22:30.430 [[32minfo[39m]: successfully found clients
+26/05/2024 23:22:31.537 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:22:33.751 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:22:33.754 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:00.044 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:00.047 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:00.610 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:00.613 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:00.922 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:00.924 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:01.170 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:01.171 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:01.472 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:01.474 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:01.754 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:23:01.755 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:24:08.204 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:24:08.214 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:24:08.840 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:24:08.842 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:24:09.123 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
+26/05/2024 23:24:09.125 [[31merror[39m]: path: src/controllers/client/findManyClientesController.js message: Cannot read properties of undefined (reading 'toUpperCase')
