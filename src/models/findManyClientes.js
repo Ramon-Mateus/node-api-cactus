@@ -4,7 +4,7 @@ const { query } = require("express");
 const prisma = new PrismaClient();
 
 module.exports = {
-  async execute(page, search, city) {
+  async execute(page, search, city, idReq) {
     const pageIndex = parseInt(page) || 0;
 
     try {
@@ -13,7 +13,8 @@ module.exports = {
           where: {
             AND: [
               search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {}
+              city ? { cidadeCliente: city } : {},
+              idReq ? { id: idReq } : {}
             ]
           },
         take: 10,
@@ -23,7 +24,8 @@ module.exports = {
           where: {
             AND: [
               search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
-              city ? { cidadeCliente: city } : {}
+              city ? { cidadeCliente: city } : {},
+              idReq ? { id: idReq } : {}
             ]
           },
         }),
@@ -33,6 +35,7 @@ module.exports = {
               { statusCliente: true },
               search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
               city ? { cidadeCliente: city } : {},
+              idReq ? { id: idReq } : {}
             ]
           }
         }),
@@ -42,6 +45,7 @@ module.exports = {
               { statusCliente: false },
               search ? { nomeCliente: { contains: search.toUpperCase() } } : {},
               city ? { cidadeCliente: city } : {},
+              idReq ? { id: idReq } : {}
             ]
           }
         }),
@@ -52,7 +56,6 @@ module.exports = {
           distinct: ['cidadeCliente']
         })
       ]);
-      console.log(cidades)
       clientes = JSON.stringify(clientes, (key, value) =>
         typeof value === "bigint" ? value.toString() : value
       );
